@@ -27,7 +27,7 @@ li {
     margin: 0 auto;
 }
 .article-title {
-    text-align: center;
+    text-align: left;
 }
 .readmore {
     font-size: 0.875rem;
@@ -141,9 +141,12 @@ main li {
     font-size: 0.875rem;
     margin-right: 20px;
 }
-main .text {
-    padding: 10px 40px 30px 40px;
+main .text{
+    text-align: center;
 }
+/* main .text {
+    padding: 10px 40px 30px 40px;
+} */
 
 /*-------------------------------------------
 aside
