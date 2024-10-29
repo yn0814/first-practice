@@ -19,9 +19,7 @@ img {
 li {
     list-style: none;
 }
-/*
-コンテンツ幅を設定するための共通クラス
-*/
+
 .wrapper {
     max-width: 1200px;
     max-height: 1200px;
@@ -35,20 +33,13 @@ li {
     font-size: 0.875rem;
     text-align: center;
 }
-/*
-疑似要素で下線を設定するために、「position: relative;」を設定
-*/
+
 .readmore a {
     padding-bottom: 1px;
     color: #333;
     position: relative;
 }
-/*
-「position: absolute;」を設定し、left、bottomで下線の位置を調整
-widthとheightで線の長さと高さを設定
-疑似要素で線を表示させるためには、「content: '';」を設定すること
-「transition: all 200ms ease;」でホバー時の速度などを設定
-*/
+
 .readmore a::after {
     content: '';
     position: absolute;
@@ -59,12 +50,7 @@ widthとheightで線の長さと高さを設定
     background: #000000;
     transition: all 200ms ease;
 }
-/*
-ホバー時の下線の設定
-「opacity: 0;」下線を非表示
-「transform: translateY(3px);」下に3px移動
-→下に3px移動しながら下線を非表示にする
-*/
+
 .readmore a:hover::after {
     opacity: 0;
     transform: translateY(3px);
@@ -73,11 +59,7 @@ widthとheightで線の長さと高さを設定
 /*-------------------------------------------
 header
 -------------------------------------------*/
-/*
-「position: fixed;」でヘッダーを固定し、「z-index: 10;」で前面に表示
-※他のコンテンツでpositionをrelative、absolute、fixedのいずれかに
-設定している場合は、z-indexの数値が大きい方が前面に表示される
-*/
+
 #header {
     width: 100%;
     background-color: #fff;
@@ -88,11 +70,7 @@ header
     padding: 20px 16px;
     line-height: 1px;
 }
-/*
-「display: inline-block;」でリンクを親要素の範囲に広げる
-※blockを指定すると横幅いっぱいまで広がってしまうため、
-inline-blockを設定している
-*/
+
 #header .site-title a {
     display: inline-block;
 }
@@ -136,9 +114,9 @@ container
 .container {
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
+    gap: 20px;
     margin-bottom: 60px;
-    /* justify-content: space-between; */
-
 }
 
 main {
@@ -170,25 +148,16 @@ main .text {
 /*-------------------------------------------
 aside
 -------------------------------------------*/
-.small-info {
-    display: flex;
-    justify-content: start;
-    margin-top: 8px;
-    gap: 20px;
-    align-items: center;
-}
-aside {
-    height: 50px;
-    width: 30%;
-    /* background-color:red; */
-}
+
 .blog-card {
     margin-left: 20px;
     margin-right: 16px;
     margin-bottom: 24px;
 }
 #sidebar {
+    flex-basis: 30%;
     width: 33%;
+    margin-left: auto;
     padding: 20px;
 }
 #sidebar .side-title {
@@ -241,7 +210,7 @@ footer
 -------------------------------------------*/
 #footer {
     font-size: 0.875rem;
-    background-color: #f7f7f7;
+    background-color: #edf3f3;
 }
 #footer .content {
     display: flex;
@@ -269,10 +238,7 @@ footer
     padding-left: 12px;
     color: #333;
 }
-/*
-疑似要素で三角矢印を表示
-border～プロパティで三角を作り、positionで位置調整
-*/
+
 #footer ul.about-list .arrow::before {
     content: '';
     width: 0;
@@ -310,7 +276,6 @@ header
     padding: 20px 16px;
 }
 #navi {
-    /* 横スクロールを表示 */
     overflow-x: scroll;
 }
 
