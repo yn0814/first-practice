@@ -144,11 +144,24 @@ main li {
 main .text{
     text-align: center;
     margin: 10 50px;
+    padding: 3 10 10 10px;
+    max-width: 100%;
+    white-space: normal;
 }
 /* main .text {
     padding: 10px 40px 30px 40px;
 } */
 
+.text-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.text {
+    max-width: 100%;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
 /*-------------------------------------------
 aside
 -------------------------------------------*/
@@ -190,6 +203,7 @@ aside
 }
 .ranking article {
     margin-bottom: 30px;
+    
 }
 .ranking .article-title {
     font-size: 0.875rem;
