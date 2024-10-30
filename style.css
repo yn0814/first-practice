@@ -22,7 +22,6 @@ li {
 
 .wrapper {
     max-width: 1200px;
-    max-height: 1200px;
     padding: 0 16px;
     margin: 0 auto;
 }
@@ -111,7 +110,7 @@ pickup
 /*-------------------------------------------
 container
 -------------------------------------------*/
-.container {
+#container {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -120,8 +119,9 @@ container
 }
 
 main {
-    height: 50px;
     width: 70%;
+    padding-right: 20px;
+    box-sizing: border-box;
     /* background-color: blue; */
     
 }
@@ -143,6 +143,7 @@ main li {
 }
 main .text{
     text-align: center;
+    margin: 10 50px;
 }
 /* main .text {
     padding: 10px 40px 30px 40px;
@@ -159,9 +160,10 @@ aside
 }
 #sidebar {
     flex-basis: 30%;
-    width: 33%;
+    width: 30%;
     margin-left: auto;
     padding: 20px;
+    box-sizing: border-box;
 }
 #sidebar .side-title {
     font-size: 1.125rem;
@@ -214,6 +216,7 @@ footer
 #footer {
     font-size: 0.875rem;
     background-color: #edf3f3;
+    clear: both;
 }
 #footer .content {
     display: flex;
